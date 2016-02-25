@@ -27,15 +27,6 @@
 			</isNotNull>
 			ORDER BY CODE
 	</select>	
-		
-		<!-- <![CDATA[
-		SELECT ID, CODE, TITLE, CONTENT, INS_DATE, R   
-		FROM (SELECT ID, CODE, TITLE, CONTENT, INS_DATE, ROWNUM AS R
-		FROM (SELECT * FROM BOARD)) 
-		WHERE R >= #startPage# AND R <= #endPage#
-		order by code
-		]]> -->
-	
 	
 	<!-- 게시글 내용 -->
 	<select id="getBoardContent" parameterClass="board.main" resultClass="java.util.HashMap">
