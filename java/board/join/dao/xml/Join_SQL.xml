@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="join">
+
+	<typeAlias alias="board.join" type="board.join.vo.JoinVO"/>
+	<resultMap id="JoinRes" class="board.join">
+		<result property="id" column="id" />
+		<result property="pw" column="pw" />
+	</resultMap>
+	
+	<!-- 회원가입 -->
+	<insert id="insertMember" parameterClass="board.join">
+		insert into member(id, pw) values(#id#, #pw#)
+	</insert>
+	
+	<!-- 아이디 중복체크 -->
+	<select id="idCheck" parameterClass="board.join" resultClass="String">
+		select id from member where id = #id#
+	</select>
+</sqlMap>

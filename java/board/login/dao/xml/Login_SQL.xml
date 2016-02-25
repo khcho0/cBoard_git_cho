@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+
+<sqlMap namespace="login">
+
+	<typeAlias alias="board.login" type="board.login.vo.LoginVO"/>
+	<resultMap id="LoginRes" class="board.login">
+		<result property="id" column="id" />
+		<result property="pw" column="pw" />
+	</resultMap>
+	
+	<!-- 유효성 체크 -->
+	<select id="idCheck" parameterClass="board.login" resultClass="String">
+		select id from member where id = #id#
+	</select>
+	
+	<select id="pwCheck" parameterClass="board.login" resultClass="String">
+		select pw from member where id = #id#
+	</select>
+
+</sqlMap>

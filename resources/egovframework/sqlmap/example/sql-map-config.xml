@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<settings useStatementNamespaces="true"></settings>
+	
+	<!-- <sqlMap resource="egovframework/sqlmap/example/sample/EgovSample_Sample_SQL.xml"/> -->
+	<sqlMap resource="board/login/dao/xml/Login_SQL.xml"/>
+	<sqlMap resource="board/join/dao/xml/Join_SQL.xml"/>
+	<sqlMap resource="board/main/dao/xml/Main_SQL.xml"/>
+</sqlMapConfig>
